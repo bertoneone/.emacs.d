@@ -11,7 +11,12 @@
 
 ;; Packets to be installed
 (defvar required-packages '(ido-vertical-mode
-			    fill-column-indicator) "list of packages")
+			    fill-column-indicator
+			    ;;themes=============
+			    color-theme-sanityinc-tomorrow
+			    planet-theme
+			    solarized-theme
+			    zenburn-theme) "list of wanted packages")
 
 ;; Add CommonLisp functions and macros
 (require 'cl)

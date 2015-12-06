@@ -10,3 +10,6 @@
 ;; fill-column-indicator  ======================================================
 (require 'fill-column-indicator)
 (setq-default fill-column 80)
+
+;; theme selection =============================================================
+(load-theme 'sanityinc-tomorrow-night t) ;dark blue background
