@@ -1,5 +1,8 @@
 ; ~/.emacs.d/init.el
 
+;; Functions and Macros ========================================================
+(load "~/.emacs.d/init/kb-macro-func.el")
+
 ;; Packages ====================================================================
 (load "~/.emacs.d/init/kb-loadpackages.el")
 

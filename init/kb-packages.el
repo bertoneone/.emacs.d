@@ -12,6 +12,7 @@
 ;; Packets to be installed
 (defvar required-packages '(ido-vertical-mode
 			    fill-column-indicator
+			    use-package
 			    ;;themes=============
 			    color-theme-sanityinc-tomorrow
 			    planet-theme
