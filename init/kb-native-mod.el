@@ -9,13 +9,20 @@
 (when (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 
 ;; Enable
-(when (fboundp 'linum-mode        ) (linum-mode         1))
 (when (fboundp 'column-number-mode) (column-number-mode 1))
 (when (fboundp 'electric-pair-mode) (electric-pair-mode 1)) ;matching delimiters
 (when (fboundp 'ido-mode          ) (ido-mode           1)) ;interactive (C-x b)
 (when (fboundp 'show-paren-mode   ) (show-paren-mode    1)) ;show matching ()
 (when (fboundp 'winner-mode       ) (winner-mode        1)) ;store windows conf
 (when (fboundp 'indent-tabs-mode  ) (indent-tabs-mode   0)) ;no tabs for indent
+(when (fboundp 'linum-mode)
+  (hook-into-modes #'(lambda () (linum-mode 1)) '(emacs-lisp-mode-hook
+							 vhdl-mode-hook
+							 verilog-mode-hook
+							 python-mode-hook
+							 c-mode-hook
+							 c++-mode-hook
+							 ruby-mode-hook)))
 
 ;; Variables/Aesthehic =========================================================
 

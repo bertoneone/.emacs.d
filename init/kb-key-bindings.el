@@ -2,12 +2,13 @@
 
 ;; General
 (global-set-key (kbd "<f1>") 'linum-mode)
+(global-set-key (kbd "<f4>") 'goto-line )
 
 ;; Wind Move
-(global-set-key (kbd "C-<left>" ) 'windmove-left)
+(global-set-key (kbd "C-<left>" ) 'windmove-left )
 (global-set-key (kbd "C-<right>") 'windmove-right)
-(global-set-key (kbd "C-<up>"   ) 'windmove-up)
-(global-set-key (kbd "C-<down>" ) 'windmove-down)
+(global-set-key (kbd "C-<up>"   ) 'windmove-up   )
+(global-set-key (kbd "C-<down>" ) 'windmove-down )
 
 ;; Actions
 (global-set-key (kbd "C-x e"  ) 'eval-buffer   )

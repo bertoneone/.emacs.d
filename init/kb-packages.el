@@ -17,6 +17,7 @@
 			    irony
 			    company-irony
 			    flycheck
+			    avy
 			    ;;themes=============
 			    color-theme-sanityinc-tomorrow
 			    planet-theme

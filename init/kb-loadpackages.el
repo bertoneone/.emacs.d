@@ -21,19 +21,19 @@
 				verilog-mode-hook
 				python-mode-hook
 				c-mode-hook
-				c++mode-hook
+				c++-mode-hook
 				ruby-mode-hook))
 	     (hook-into-modes #'(lambda () (fci-mode 1) (setq-default
 							 fci-rule-column 120))
-			      '(org-mode-hook))
-	     )
+			      '(org-mode-hook)))
 
 ;; COMPANY =====================================================================
 ;;; Complete anything! Provides a popup menu with suggestions for many languages
 ;;; 2 characters for popup suggestion and show options numbers
 (use-package company
   :defer t
-  :init (add-hook 'after-init-hook 'global-company-mode)
+  :init
+  (add-hook 'after-init-hook 'global-company-mode)
   :config
   (setq company-minimum-prefix-length 2
 	company-show-numbers          t))
@@ -71,7 +71,20 @@
    :config
    (add-hook 'after-init-hook #'global-flycheck-mode))
 
+;; AVY  ========================================================================
+;;; let you jump to specific words with "M-g w"
+(use-package avy
+  :defer t
+  :init
+  (avy-setup-default)
+  :config
+  (setq avy-style 'at-full avy-background t)
+  :bind
+  ("M-g w" . avy-goto-word-1))
+
 ;; YASNIPPET  ==================================================================
+
+;; MAGIT =======================================================================
 
 ;; theme selection =============================================================
 (load-theme 'sanityinc-tomorrow-night t) ;dark blue background
