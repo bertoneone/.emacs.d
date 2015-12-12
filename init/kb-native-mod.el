@@ -1,6 +1,6 @@
 ; ~/.emacs.d/init/kb-native-mod.el
 
-;; Emacs Modes==================================================================
+;; Emacs Modes =================================================================
 
 ;; Disable/Remove
 (when (fboundp 'menu-bar-mode  )   (menu-bar-mode     0))
@@ -22,6 +22,7 @@
 (set-face-attribute 'default nil :height 110) ;set font size (/10)
 (setq initial-scratch-message            nil) ;message in the buffer at init
 (setq inhibit-startup-message              t) ;startup screen with options
+(setq python-shell-interpreter     "python3")
 (defun display-startup-echo-area-message () (message "Welcome back KB!"))
 
 ;;; Suggested fix to make show-paren-mode display where is matching if offscreen

@@ -13,6 +13,10 @@
 (defvar required-packages '(ido-vertical-mode
 			    fill-column-indicator
 			    use-package
+			    company
+			    irony
+			    company-irony
+			    flycheck
 			    ;;themes=============
 			    color-theme-sanityinc-tomorrow
 			    planet-theme
