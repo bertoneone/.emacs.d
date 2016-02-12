@@ -26,10 +26,11 @@
 
 ;; Variables/Aesthehic =========================================================
 
-(set-face-attribute 'default nil :height 110) ;set font size (/10)
-(setq initial-scratch-message            nil) ;message in the buffer at init
-(setq inhibit-startup-message              t) ;startup screen with options
-(setq python-shell-interpreter     "python3")
+(set-face-attribute 'default nil   :height 110) ;set font size (/10)
+(setq initial-scratch-message              nil) ;message in the buffer at init
+(setq inhibit-startup-message                t) ;startup screen with options
+(setq python-shell-interpreter       "python3")
+(autoload 'ibuffer "ibuffer" "List buffers." t) ;configure ibuffer
 (defun display-startup-echo-area-message () (message "Welcome back KB!"))
 
 ;;; Suggested fix to make show-paren-mode display where is matching if offscreen

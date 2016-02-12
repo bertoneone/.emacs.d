@@ -6,4 +6,6 @@
      (add-hook mode-hook, func)))
 
 ;; Functions ===================================================================
-
+(defun enable-heavy-modes ()
+  (interactive)
+  (yas-reload-all))

@@ -9,20 +9,15 @@
 			 ("org"       . "http://orgmode.org/elpa/"            )))
 (package-initialize)
 
-;; Packets to be installed
-(defvar required-packages '(ido-vertical-mode
-			    fill-column-indicator
-			    use-package
-			    company
-			    irony
-			    company-irony
-			    flycheck
-			    avy
+;; Packets to be installed without use-package 
+(defvar required-packages '(use-package
+			    ido-vertical-mode
 			    ;;themes=============
 			    color-theme-sanityinc-tomorrow
 			    planet-theme
 			    solarized-theme
-			    zenburn-theme) "list of wanted packages")
+			    zenburn-theme
+			    apropospriate-theme) "list of wanted packages")
 
 ;; Add CommonLisp functions and macros
 (require 'cl)
