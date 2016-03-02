@@ -22,7 +22,8 @@
 							 python-mode-hook
 							 c-mode-hook
 							 c++-mode-hook
-							 ruby-mode-hook)))
+							 ruby-mode-hook
+							 asm-mode-hook)))
 
 ;; Variables/Aesthehic =========================================================
 

@@ -16,6 +16,17 @@
 (require 'ido-vertical-mode)
 (when (fboundp 'ido-vertical-mode) (ido-vertical-mode 1))
 
+;; ASM-MODE  ===================================================================
+;; Better identation for assembler mode
+(require 'asm-mode)
+(add-hook 'asm-mode-hook (lambda ()
+			   (setq indent-tabs-mode nil) ; use spaces to indent
+                           (electric-indent-mode -1) ; indentation in asm-mode is annoying
+                           (setq tab-stop-list '(3 12 40))))
+(define-key asm-mode-map (kbd "<tab>") 'tab-to-tab-stop)
+(define-key asm-mode-map (kbd "<ret>") 'newline-and-indent)
+(define-key asm-mode-map (kbd "M-.") 'helm-etags-select)
+
 ;; FILL-COLUMN-INDICATOR  ======================================================
 ;;; add a vertical line at a specific line to show margins of the page
 (use-package fill-column-indicator
@@ -29,7 +40,8 @@
 				python-mode-hook
 				c-mode-hook
 				c++-mode-hook
-				ruby-mode-hook))
+				ruby-mode-hook
+				asm-mode-hook))
 	     (hook-into-modes #'(lambda () (fci-mode 1) (setq-default
 							 fci-rule-column 120))
 			      '(org-mode-hook)))
