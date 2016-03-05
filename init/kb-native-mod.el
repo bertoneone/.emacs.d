@@ -9,6 +9,7 @@
 (when (fboundp 'blink-cursor-mode) (blink-cursor-mode 0))
 
 ;; Enable
+;(when (fboundp 'server-mode       ) (server-mode        1)) ;use emacsclient!
 (when (fboundp 'column-number-mode) (column-number-mode 1))
 (when (fboundp 'electric-pair-mode) (electric-pair-mode 1)) ;matching delimiters
 (when (fboundp 'ido-mode          ) (ido-mode           1)) ;interactive (C-x b)
