@@ -1,6 +1,13 @@
 ; ~/.emacs.d/init.el
 
 ;; Functions and Macros ========================================================
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (load "~/.emacs.d/init/kb-macro-func.el")
 
 ;; Packages ====================================================================
@@ -24,6 +31,9 @@
    (quote
     ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "5a0eee1070a4fc64268f008a4c7abfda32d912118e080e18c3c865ef864d1bea" default)))
  '(fci-rule-color "#373b41")
+ '(package-selected-packages
+   (quote
+    (yasnippet avy flycheck company-irony company fill-column-indicator apropospriate-theme zenburn-theme solarized-theme planet-theme color-theme-sanityinc-tomorrow ido-vertical-mode use-package)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote

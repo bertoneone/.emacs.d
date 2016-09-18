@@ -18,17 +18,17 @@
 (when (fboundp 'indent-tabs-mode  ) (indent-tabs-mode   0)) ;no tabs for indent
 (when (fboundp 'linum-mode)
   (hook-into-modes #'(lambda () (linum-mode 1)) '(emacs-lisp-mode-hook
-							 vhdl-mode-hook
-							 verilog-mode-hook
-							 python-mode-hook
-							 c-mode-hook
-							 c++-mode-hook
-							 ruby-mode-hook
-							 asm-mode-hook)))
+						  vhdl-mode-hook
+						  verilog-mode-hook
+						  python-mode-hook
+						  c-mode-hook
+						  c++-mode-hook
+						  ruby-mode-hook
+						  asm-mode-hook)))
 
 ;; Variables/Aesthehic =========================================================
 
-(set-face-attribute 'default nil   :height 110) ;set font size (/10)
+(set-face-attribute 'default nil   :height 100) ;set font size (/10)
 (setq initial-scratch-message              nil) ;message in the buffer at init
 (setq inhibit-startup-message                t) ;startup screen with options
 (setq python-shell-interpreter       "python3")
